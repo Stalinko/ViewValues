@@ -23,7 +23,7 @@ class ViewValues extends ArrayObject{
 	 * @param array $array
 	 * @return ViewValues
 	 */
-	function __construct(&$array = array()){
+	function __construct($array = array()){
 		foreach ($array as $key => $value){
 			if (is_array($value)){
 				$array[$key] = new self($value);
